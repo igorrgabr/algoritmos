@@ -77,13 +77,16 @@ int linked_list_find(linked_list_int * list, int element) {
 }
 
 unsigned int linked_list_insert_at(linked_list_int * list, int index, int value) {
-    linked_list_int_node *node = (linked_list_int_node *) malloc(sizeof(linked_list_int_node));
-    node = list->first;
-    for (int i = 0; i < index; i++) {
-        node = node->next;
-        if (i == index-2) node->prev = node;
-    }
-    node->value = value;
+    if (index < 0 || index > list->size) return 0;
+    linked_list_int_node *current = (linked_list_int_node *) malloc(sizeof(linked_list_int_node));
+    linked_list_int_node *new_node = (linked_list_int_node *) malloc(sizeof(linked_list_int_node));
+    current = list->first;
+    new_node->value = value;
+    for (int i = 0; i < index; i++) current = current->next;
+    new_node->next = current->next;
+    current->next = new_node;
+    if (index == 1) list->first = new_node;
+    list->size++;
     return linked_list_size(list);
 }
 
