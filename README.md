@@ -1,2 +1,2 @@
 # algoritmos
-repositório dedicado à disciplina de algoritmos
+repositório com projetos feitos na disciplina.
