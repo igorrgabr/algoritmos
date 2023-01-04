@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "array_list_int.h": "c"
+    },
+    "git.ignoreLimitWarning": true
+}
