@@ -37,7 +37,7 @@ int main() {
     }
     t = clock() - t;
 
-    printf("Tempo para insercao: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para insercao: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
     printf("Foi necessario acrescentar memoria %d vezes.\n", count_mem);
     printf("\n");
 
@@ -46,7 +46,7 @@ int main() {
     printf("\n");
     t = clock() - t;
 
-    printf("Tempo para impressao: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para impressao: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
     printf("\n");
 
     // PEGAR ELEMENTO DO ÍNDICE
@@ -54,7 +54,7 @@ int main() {
     size = array_list_pop_back(l1);
     t = clock() - t;
 
-    printf("Tempo para pegar elemento: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para pegar elemento: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
     printf("\n");
     // printf nova lista
 
@@ -63,7 +63,7 @@ int main() {
     size = array_list_size(l1);
     t = clock() - t;
 
-    printf("Tempo para pegar tamanho: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para pegar tamanho: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
     printf("\n");
     // printf nova lista
 
@@ -72,7 +72,7 @@ int main() {
     int ind = array_list_find(l1, 10);
     t = clock() - t;
 
-    printf("Tempo para achar indice: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para achar indice: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
     printf("Indice do elemento: %d\n", ind);
     printf("\n");
     // printf nova lista
@@ -82,7 +82,7 @@ int main() {
     size = array_list_insert_at(l1, 5, 10);
     t = clock() - t;
 
-    printf("Tempo para adicionar: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para adicionar: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
     printf("\n");
     // printf nova lista
 
@@ -91,7 +91,7 @@ int main() {
     size = array_list_remove_from(l1, 3);
     t = clock() - t;
 
-    printf("Tempo para remover: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para remover: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
     printf("\n");
     
     t = clock();
@@ -99,7 +99,7 @@ int main() {
     printf("\n");
     t = clock() - t;
 
-    printf("Tempo para impressao: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para impressao: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
     printf("\n");
 
     // CAPACIDADE
@@ -115,7 +115,7 @@ int main() {
     array_list_destroy(l1);
     t = clock() - t;
 
-    printf("Tempo para liberacao: %.4lf milissegundos.\n", ((double) t) / (CLOCKS_PER_SEC / 1000));
+    printf("Tempo para liberacao: %.4lf milissegundos.\n", ((double) t / CLOCKS_PER_SEC) * 1000);
 
     return 0;
 }
