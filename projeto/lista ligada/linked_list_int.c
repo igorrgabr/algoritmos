@@ -114,6 +114,7 @@ int linked_list_remove_from(linked_list_int * list, int index) {
 }
 
 double linked_list_percent_occupied(linked_list_int * list) {
+    if (list->first == 0) return 0.0;
     return 1.0;
 }
 
